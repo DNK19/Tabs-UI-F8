@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tab UI F8</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
@@ -16,8 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./main.js">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="shortcut icon" type="image/png" href="/img/user-interface.png"/>
   </head>
   <body>
     <div>
@@ -77,33 +77,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-        const $ = document.querySelector.bind(document);
-        const $$ = document.querySelectorAll.bind(document);
-
-        const tabs = $$('.tab-item');
-        const panes = $$('.tab-pane');
-
-        const tabActive = $('.tab-item.active');
-        const line = $('.tabs .line');
-
-        
-
-        tabs.forEach((tab, index) => {
-            const pane = panes[index];
-
-            tab.onclick = function() {
-                $('.tab-item.active').classList.remove('active');
-                $('.tab-pane.active').classList.remove('active');
-
-                line.style.left = this.offsetLeft + px;
-                line.style.width = this.offsetWidth + px;
-                this.classList.add('active');
-                pane.classList.add('active');
-            }
-        });
-    </script>
-
+    <script src="/assets/main.js"></script>
   </body>
 </html>
